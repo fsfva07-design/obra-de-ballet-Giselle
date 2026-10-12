@@ -1,0 +1,133 @@
+/* ==========================================
+   TEMA VAMPIRO - GÓTICO OSCURO (CSS)
+   ========================================== */
+
+:root {
+  --bg-primary: #0a0505;
+  --bg-secondary: #140808;
+  --bg-card: #1f0c0c;
+  --blood-red: #8b0000;
+  --blood-bright: #ff1a1a;
+  --blood-glow: rgba(255, 26, 26, 0.4);
+  --text-primary: #e6e6e6;
+  --text-muted: #a39b9b;
+  --border-color: #3d1414;
+  --font-gothic: 'Cinzel', 'Georgia', serif;
+  --font-body: 'Crimson Text', 'Times New Roman', serif;
+}
+
+/* Estilos Generales */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(circle at 50% 20%, #1a0505 0%, #0a0505 70%);
+  background-attachment: fixed;
+}
+
+/* Tipografía y Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-gothic);
+  color: var(--blood-bright);
+  text-shadow: 0 0 10px var(--blood-glow);
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+/* Enlaces */
+a {
+  color: var(--blood-bright);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--blood-bright);
+}
+
+/* Tarjetas y Contenedores */
+.vampire-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(139, 0, 0, 0.1);
+  position: relative;
+}
+
+.vampire-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--blood-bright), transparent);
+}
+
+/* Botones */
+.vampire-btn {
+  background: linear-gradient(135deg, #400000 0%, var(--blood-red) 100%);
+  color: var(--text-primary);
+  font-family: var(--font-gothic);
+  border: 1px solid var(--blood-bright);
+  padding: 12px 25px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+.vampire-btn:hover {
+  background: linear-gradient(135deg, var(--blood-red) 0%, var(--blood-bright) 100%);
+  box-shadow: 0 0 15px var(--blood-bright);
+  color: #fff;
+}
+
+/* Tablas */
+table.vampire-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+table.vampire-table th, 
+table.vampire-table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+table.vampire-table th {
+  background-color: var(--bg-card);
+  font-family: var(--font-gothic);
+  color: var(--blood-bright);
+}
+
+/* Entradas de Formulario */
+input[type="text"], 
+input[type="password"], 
+textarea {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 10px;
+  font-family: var(--font-body);
+  border-radius: 2px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+textarea:focus {
+  outline: none;
+  border-color: var(--blood-bright);
+  box-shadow: 0 0 8px var(--blood-glow);
+}
